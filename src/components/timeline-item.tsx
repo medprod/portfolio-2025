@@ -13,8 +13,8 @@ const TimelineItem = ({
   company,
   period,
   description,
-  isLast = false,
-}: TimelineItemProps) => {
+}: // isLast = false,
+TimelineItemProps) => {
   return (
     <div className="relative pl-8 pb-8">
       {/* Timeline line */}
