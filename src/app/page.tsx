@@ -194,16 +194,19 @@ export default function Home() {
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          AWS
+                          AWS EC2
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          Docker
+                          AWS S3
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          Kubernetes
+                          AWS RDS
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          CI/CD
+                          GCP BigQuery, Dataflow, PubSub, Data Fusion
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Azure Data Factory
                         </span>
                       </div>
                     </div>
