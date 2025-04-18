@@ -1,103 +1,395 @@
+"use client";
+
+import Navbar from "@/components/navbar";
+import { Card } from "@/components/ui/card";
+import TimelineItem from "@/components/timeline-item";
+import ProjectCard from "@/components/project-card";
+import { useState } from "react";
 import Image from "next/image";
 
-export default function Home() {
-  return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+type ProjectCategory = "cloud" | "data-analysis" | "ai-ml" | "other";
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+export default function Home() {
+  const [activeCategory, setActiveCategory] = useState<
+    "all" | "cloud" | "data-analysis" | "ai-ml" | "other"
+  >("all");
+
+  const projects: {
+    title: string;
+    description: string;
+    category: ProjectCategory;
+    technologies: string[];
+  }[] = [
+    {
+      title: "Cloud Infrastructure Automation",
+      description:
+        "Automated cloud infrastructure deployment using Terraform and AWS.",
+      category: "cloud",
+      technologies: ["AWS", "Terraform", "Docker", "Kubernetes"],
+    },
+    {
+      title: "Data Visualization Dashboard",
+      description:
+        "Interactive dashboard for real-time data analysis and visualization.",
+      category: "data-analysis",
+      technologies: ["Python", "React", "D3.js", "PostgreSQL"],
+    },
+    {
+      title: "AI-Powered Chatbot",
+      description: "Natural language processing chatbot for customer support.",
+      category: "ai-ml",
+      technologies: ["Python", "TensorFlow", "NLP", "FastAPI"],
+    },
+    {
+      title: "E-commerce Platform",
+      description: "Full-stack e-commerce platform with payment integration.",
+      category: "other",
+      technologies: ["React", "Node.js", "MongoDB", "Stripe"],
+    },
+  ];
+
+  const filteredProjects =
+    activeCategory === "all"
+      ? projects
+      : projects.filter((project) => project.category === activeCategory);
+
+  return (
+    <main className="animated-bg">
+      <Navbar />
+      <div className="pt-16">
+        {/* About Section */}
+        <section
+          id="about"
+          className="min-h-screen flex items-center justify-center px-4"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <div className="container mx-auto max-w-4xl space-y-6">
+            {/* About Me Card */}
+            <Card className="p-8 bg-white/80 border-[#FFE8B0]">
+              <div className="flex flex-col md:flex-row gap-8 items-center">
+                {/* Profile Image */}
+                <div className="w-48 h-48 rounded-full overflow-hidden bg-[#FFE8B0] flex items-center justify-center shadow-lg border-2 border-[#FFE8B0] relative">
+                  <Image
+                    src="/images/image.png"
+                    alt="Medhaa Prodduturi"
+                    fill
+                    className="object-cover scale-[1.85] object-[50%_95%]"
+                    priority
+                  />
+                </div>
+
+                {/* About Text */}
+                <div className="flex-1">
+                  <h1 className="text-4xl font-bold mb-4 text-[#8B6B3D]">
+                    Hi, I&apos;m Medha
+                  </h1>
+                  <p className="text-gray-700 text-lg">
+                    I&apos;m a passionate developer with a keen eye for design
+                    and a love for creating beautiful, functional applications.
+                    My journey in tech has been driven by curiosity and a
+                    constant desire to learn and improve.
+                  </p>
+                </div>
+              </div>
+            </Card>
+
+            {/* Skills and Education Cards Container */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              {/* Skills Card */}
+              <Card className="p-8 bg-white/80 border-[#FFE8B0]">
+                <h2 className="text-2xl font-bold mb-6 text-[#8B6B3D] flex items-center gap-2">
+                  <svg
+                    className="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z" />
+                    <path
+                      fillRule="evenodd"
+                      d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                      clipRule="evenodd"
+                    />
+                  </svg>
+                  Skills
+                </h2>
+                <div className="grid grid-cols-1 gap-6">
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-lg font-semibold text-[#8B6B3D] mb-3 flex items-center gap-2">
+                        <svg
+                          className="w-5 h-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        Frontend Development
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          React
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Next.js
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          TypeScript
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Tailwind CSS
+                        </span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-semibold text-[#8B6B3D] mb-3 flex items-center gap-2">
+                        <svg
+                          className="w-5 h-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M2 5a2 2 0 012-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V5zm3.293 1.293a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 01-1.414-1.414L7.586 10 5.293 7.707a1 1 0 010-1.414zM11 12a1 1 0 100 2h3a1 1 0 100-2h-3z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        Backend Development
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Node.js
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Python
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          FastAPI
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          PostgreSQL
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-lg font-semibold text-[#8B6B3D] mb-3 flex items-center gap-2">
+                        <svg
+                          className="w-5 h-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z" />
+                        </svg>
+                        Cloud & DevOps
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          AWS
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Docker
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Kubernetes
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          CI/CD
+                        </span>
+                      </div>
+                    </div>
+
+                    <div>
+                      <h3 className="text-lg font-semibold text-[#8B6B3D] mb-3 flex items-center gap-2">
+                        <svg
+                          className="w-5 h-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        Tools & Others
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Git
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Agile
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          REST APIs
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Testing
+                        </span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </Card>
+
+              {/* Education Card */}
+              <Card className="p-8 bg-white/80 border-[#FFE8B0]">
+                <h2 className="text-2xl font-bold mb-6 text-[#8B6B3D] flex items-center gap-2">
+                  <svg
+                    className="w-6 h-6"
+                    fill="currentColor"
+                    viewBox="0 0 20 20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                  </svg>
+                  Education
+                </h2>
+                <div className="space-y-8">
+                  <div className="relative pl-8 border-l-4 border-[#FFE8B0]">
+                    <div className="absolute w-4 h-4 bg-[#8B6B3D] rounded-full -left-[10px] top-1"></div>
+                    <h3 className="text-xl font-semibold text-[#8B6B3D]">
+                      Master of Science
+                    </h3>
+                    <p className="text-gray-700 font-medium mt-1">
+                      Your University Name
+                    </p>
+                    <p className="text-[#8B6B3D]/80 text-sm mt-1">
+                      202X - 202X
+                    </p>
+                    <p className="text-gray-700 mt-2 italic">
+                      Relevant coursework or achievements
+                    </p>
+                  </div>
+
+                  <div className="relative pl-8 border-l-4 border-[#FFE8B0]">
+                    <div className="absolute w-4 h-4 bg-[#8B6B3D] rounded-full -left-[10px] top-1"></div>
+                    <h3 className="text-xl font-semibold text-[#8B6B3D]">
+                      Bachelor of Science
+                    </h3>
+                    <p className="text-gray-700 font-medium mt-1">
+                      Your University Name
+                    </p>
+                    <p className="text-[#8B6B3D]/80 text-sm mt-1">
+                      202X - 202X
+                    </p>
+                    <p className="text-gray-700 mt-2 italic">
+                      Major, minor, or relevant achievements
+                    </p>
+                  </div>
+
+                  <div className="relative pl-8 border-l-4 border-[#FFE8B0]">
+                    <div className="absolute w-4 h-4 bg-[#8B6B3D] rounded-full -left-[10px] top-1"></div>
+                    <h3 className="text-xl font-semibold text-[#8B6B3D]">
+                      High School
+                    </h3>
+                    <p className="text-gray-700 font-medium mt-1">
+                      Your High School Name
+                    </p>
+                    <p className="text-[#8B6B3D]/80 text-sm mt-1">
+                      202X - 202X
+                    </p>
+                    <p className="text-gray-700 mt-2 italic">
+                      Notable achievements or activities
+                    </p>
+                  </div>
+                </div>
+              </Card>
+            </div>
+
+            {/* Experience Section */}
+            <section
+              id="experience"
+              className="min-h-screen flex items-center justify-center px-4"
+            >
+              <div className="container mx-auto max-w-4xl">
+                <Card className="p-8 bg-white/80 border-[#FFE8B0]">
+                  <h2 className="text-3xl font-bold mb-8 text-[#8B6B3D]">
+                    Experience
+                  </h2>
+                  <div className="space-y-4">
+                    <TimelineItem
+                      title="Senior Developer"
+                      company="Company Name"
+                      period="2020 - Present"
+                      description="Leading development teams and implementing cutting-edge solutions."
+                    />
+                    <TimelineItem
+                      title="Software Engineer"
+                      company="Previous Company"
+                      period="2018 - 2020"
+                      description="Developed and maintained web applications using modern technologies."
+                    />
+                    <TimelineItem
+                      title="Junior Developer"
+                      company="First Company"
+                      period="2016 - 2018"
+                      description="Started my journey in software development, learning and growing with the team."
+                      isLast={true}
+                    />
+                  </div>
+                </Card>
+              </div>
+            </section>
+
+            {/* Projects Section */}
+            <section
+              id="projects"
+              className="min-h-screen flex items-center justify-center px-4"
+            >
+              <div className="container mx-auto max-w-4xl">
+                <Card className="p-8 bg-white/80 border-[#FFE8B0]">
+                  <h2 className="text-3xl font-bold mb-6 text-[#8B6B3D]">
+                    Projects
+                  </h2>
+                  <div className="flex flex-wrap gap-2 mb-8">
+                    {["all", "cloud", "data-analysis", "ai-ml", "other"].map(
+                      (category) => (
+                        <button
+                          key={category}
+                          onClick={() =>
+                            setActiveCategory(
+                              category as
+                                | "all"
+                                | "cloud"
+                                | "data-analysis"
+                                | "ai-ml"
+                                | "other"
+                            )
+                          }
+                          className={`px-4 py-2 rounded-full text-sm transition-colors ${
+                            activeCategory === category
+                              ? "bg-[#8B6B3D] text-white"
+                              : "bg-[#FFE8B0] text-[#8B6B3D] hover:bg-[#FFE8B0]/80"
+                          }`}
+                        >
+                          {category.replace("-", " ")}
+                        </button>
+                      )
+                    )}
+                  </div>
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    {filteredProjects.map((project) => (
+                      <ProjectCard key={project.title} {...project} />
+                    ))}
+                  </div>
+                </Card>
+              </div>
+            </section>
+          </div>
+        </section>
+      </div>
+    </main>
   );
 }
