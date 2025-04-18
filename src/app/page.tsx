@@ -329,22 +329,25 @@ export default function Home() {
                   </h2>
                   <div className="space-y-4">
                     <TimelineItem
-                      title="Senior Developer"
-                      company="Company Name"
-                      period="2020 - Present"
-                      description="Leading development teams and implementing cutting-edge solutions."
+                      title="Data Analyst II"
+                      company="bswift"
+                      period="2024 - Present"
+                      description="Optimizing ETL workflows, resolving data issues using SQL and Excel, 
+                      and colloborating with vendors to document and deliver accurate, client-ready solutions for benefits platform onboarding."
                     />
                     <TimelineItem
-                      title="Software Engineer"
-                      company="Previous Company"
-                      period="2018 - 2020"
-                      description="Developed and maintained web applications using modern technologies."
+                      title="Data Engineer"
+                      company="Schlumberger"
+                      period="2023 - 2023"
+                      description="Led ETL deployments and optimized SQL-driven data flows across 10,000+ sources in Azure, accelerating performance by 
+                      55% and driving agile, cross-functional delivery through Azure DevOps."
                     />
                     <TimelineItem
-                      title="Junior Developer"
-                      company="First Company"
-                      period="2016 - 2018"
-                      description="Started my journey in software development, learning and growing with the team."
+                      title="Product Analyst"
+                      company="Prodbee Media"
+                      period="2022 - 2023"
+                      description="Analyzed forum content for product managers using Python and A/B testing to uncover user behavior trends, 
+                      supported decision-making with Tableau dashboards, and integrated customer feedback to enhance product strategy."
                       isLast={true}
                     />
                   </div>
