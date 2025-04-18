@@ -263,29 +263,29 @@ export default function Home() {
                       Master of Science
                     </h3>
                     <p className="text-gray-700 font-medium mt-1">
-                      Your University Name
+                      Boston University
                     </p>
                     <p className="text-[#8B6B3D]/80 text-sm mt-1">
-                      202X - 202X
+                      2024 - 2026
                     </p>
                     <p className="text-gray-700 mt-2 italic">
-                      Relevant coursework or achievements
+                      Database Management and Business Intelligence
                     </p>
                   </div>
 
                   <div className="relative pl-8 border-l-4 border-[#FFE8B0]">
                     <div className="absolute w-4 h-4 bg-[#8B6B3D] rounded-full -left-[10px] top-1"></div>
                     <h3 className="text-xl font-semibold text-[#8B6B3D]">
-                      Bachelor of Science
+                      Bachelor of Technology
                     </h3>
                     <p className="text-gray-700 font-medium mt-1">
-                      Your University Name
+                      Mahindra University
                     </p>
                     <p className="text-[#8B6B3D]/80 text-sm mt-1">
-                      202X - 202X
+                      2020 - 2024
                     </p>
                     <p className="text-gray-700 mt-2 italic">
-                      Major, minor, or relevant achievements
+                      Computer Science and Engineering
                     </p>
                   </div>
 
