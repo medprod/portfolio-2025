@@ -86,7 +86,7 @@ export default function Home() {
                     I&apos;m a Data Analyst and Engineer currently based in Chicago, IL. 
                     I love diving into complex datasets, uncovering patterns, and turning numbers into narratives that resonate. 
                     With a strong foundation in Python, SQL, and R, I bring both analytical rigor and a creative touch to my work. 
-                    I would love to connect and explore how we can make data work for us; feel free to email me!
+                    I would love to connect and explore how we can make data work for us. Feel free to check out my work below and email me!
                   </p>
                 </div>
               </div>
@@ -136,6 +136,9 @@ export default function Home() {
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
                           SQL
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          R
                         </span>
                       </div>
                     </div>
