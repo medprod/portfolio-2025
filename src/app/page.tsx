@@ -72,7 +72,7 @@ export default function Home() {
                     src="/images/image.png"
                     alt="Medhaa Prodduturi"
                     fill
-                    className="object-cover scale-[1.85] object-[50%_95%]"
+                    className="object-cover scale-[0.5] object-[50%_95%]"
                     priority
                   />
                 </div>
