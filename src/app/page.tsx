@@ -128,20 +128,14 @@ export default function Home() {
                             clipRule="evenodd"
                           />
                         </svg>
-                        Frontend Development
+                        Languages
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          React
+                          Python
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          Next.js
-                        </span>
-                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          TypeScript
-                        </span>
-                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          Tailwind CSS
+                          SQL
                         </span>
                       </div>
                     </div>
@@ -160,20 +154,20 @@ export default function Home() {
                             clipRule="evenodd"
                           />
                         </svg>
-                        Backend Development
+                        Databases
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          Node.js
-                        </span>
-                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          Python
-                        </span>
-                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          FastAPI
+                          mySQL
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
                           PostgreSQL
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          SQL Server
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          MongoDB
                         </span>
                       </div>
                     </div>
@@ -194,19 +188,19 @@ export default function Home() {
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          AWS EC2
+                          AWS
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          AWS S3
-                        </span>
-                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          AWS RDS
-                        </span>
-                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          GCP BigQuery, Dataflow, PubSub, Data Fusion
+                          GCP BigQuery
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
                           Azure Data Factory
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Azure DevOps
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Docker
                         </span>
                       </div>
                     </div>
@@ -232,13 +226,22 @@ export default function Home() {
                           Git
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Tableau
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Looker Studio
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Lucidchart
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
                           Agile
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          REST APIs
+                          VS Code
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          Testing
+                          Azure Data Studio
                         </span>
                       </div>
                     </div>
