@@ -276,6 +276,22 @@ export default function Home() {
                   <div className="relative pl-8 border-l-4 border-[#FFE8B0]">
                     <div className="absolute w-4 h-4 bg-[#8B6B3D] rounded-full -left-[10px] top-1"></div>
                     <h3 className="text-xl font-semibold text-[#8B6B3D]">
+                      CISE Senior Certification
+                    </h3>
+                    <p className="text-gray-700 font-medium mt-1">
+                      University of Florida
+                    </p>
+                    <p className="text-[#8B6B3D]/80 text-sm mt-1">
+                      2024 - 2024
+                    </p>
+                    <p className="text-gray-700 mt-2 italic">
+                      Computer Science and Engineering
+                    </p>
+                  </div>
+
+                  <div className="relative pl-8 border-l-4 border-[#FFE8B0]">
+                    <div className="absolute w-4 h-4 bg-[#8B6B3D] rounded-full -left-[10px] top-1"></div>
+                    <h3 className="text-xl font-semibold text-[#8B6B3D]">
                       Bachelor of Technology
                     </h3>
                     <p className="text-gray-700 font-medium mt-1">
@@ -286,22 +302,6 @@ export default function Home() {
                     </p>
                     <p className="text-gray-700 mt-2 italic">
                       Computer Science and Engineering
-                    </p>
-                  </div>
-
-                  <div className="relative pl-8 border-l-4 border-[#FFE8B0]">
-                    <div className="absolute w-4 h-4 bg-[#8B6B3D] rounded-full -left-[10px] top-1"></div>
-                    <h3 className="text-xl font-semibold text-[#8B6B3D]">
-                      High School
-                    </h3>
-                    <p className="text-gray-700 font-medium mt-1">
-                      Your High School Name
-                    </p>
-                    <p className="text-[#8B6B3D]/80 text-sm mt-1">
-                      202X - 202X
-                    </p>
-                    <p className="text-gray-700 mt-2 italic">
-                      Notable achievements or activities
                     </p>
                   </div>
                 </div>
