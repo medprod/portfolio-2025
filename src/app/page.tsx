@@ -80,13 +80,13 @@ export default function Home() {
                 {/* About Text */}
                 <div className="flex-1">
                   <h1 className="text-4xl font-bold mb-4 text-[#8B6B3D]">
-                    Hi, I&apos;m Medha
+                    Hello! I&apos;m Medha :)
                   </h1>
                   <p className="text-gray-700 text-lg">
-                    I&apos;m a passionate developer with a keen eye for design
-                    and a love for creating beautiful, functional applications.
-                    My journey in tech has been driven by curiosity and a
-                    constant desire to learn and improve.
+                    I&apos;m a Data Analyst and Engineer currently based in Chicago, IL. 
+                    I love diving into complex datasets, uncovering patterns, and turning numbers into narratives that resonate. 
+                    With a strong foundation in Python, SQL, and R, I bring both analytical rigor and a creative touch to my work. 
+                    I would love to connect and explore how we can make data work for us; feel free to email me!
                   </p>
                 </div>
               </div>
