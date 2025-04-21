@@ -157,7 +157,7 @@ export default function Home() {
                             clipRule="evenodd"
                           />
                         </svg>
-                        Data Pipelines & Workflow Orchestration
+                        ETL Data Pipeline Orchestration
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
@@ -244,13 +244,7 @@ export default function Home() {
                           Google Cloud Storage
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          Azure Synapse Analytics
-                        </span>
-                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
                           Azure DevOps
-                        </span>
-                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          Docker
                         </span>
                       </div>
                     </div>
