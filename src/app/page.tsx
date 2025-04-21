@@ -83,7 +83,7 @@ export default function Home() {
                     Hello! I&apos;m Medha :)
                   </h1>
                   <p className="text-gray-700 text-lg">
-                    I&apos;m a Data Analyst and Engineer currently based in Chicago, IL. 
+                    I&apos;m a Data Analytics Engineer currently based in Chicago, IL. 
                     I love diving into complex datasets, uncovering patterns, and turning numbers into narratives that resonate. 
                     With a strong foundation in Python, SQL, and R, I bring both analytical rigor and a creative touch to my work. 
                     I would love to connect and explore how we can make data work for us. Feel free to check out my work below and email me!
@@ -128,7 +128,7 @@ export default function Home() {
                             clipRule="evenodd"
                           />
                         </svg>
-                        Languages
+                        Programming & Scripting
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
@@ -157,7 +157,7 @@ export default function Home() {
                             clipRule="evenodd"
                           />
                         </svg>
-                        Databases
+                        Data Analysis & Processing
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
@@ -187,23 +187,78 @@ export default function Home() {
                         >
                           <path d="M5.5 16a3.5 3.5 0 01-.369-6.98 4 4 0 117.753-1.977A4.5 4.5 0 1113.5 16h-8z" />
                         </svg>
-                        Cloud & DevOps
+                        Cloud Platforms & Services
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          AWS
+                          AWS EC2
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          AWS S3
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          AWS Redshift
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
                           GCP BigQuery
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Google Cloud Storage
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          GCP Dataflow
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          GCP Data Fusion
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
                           Azure Data Factory
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Azure Synapse Analytics
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
                           Azure DevOps
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
                           Docker
+                        </span>
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="text-lg font-semibold text-[#8B6B3D] mb-3 flex items-center gap-2">
+                        <svg
+                          className="w-5 h-5"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            fillRule="evenodd"
+                            d="M11.49 3.17c-.38-1.56-2.6-1.56-2.98 0a1.532 1.532 0 01-2.286.948c-1.372-.836-2.942.734-2.106 2.106.54.886.061 2.042-.947 2.287-1.561.379-1.561 2.6 0 2.978a1.532 1.532 0 01.947 2.287c-.836 1.372.734 2.942 2.106 2.106a1.532 1.532 0 012.287.947c.379 1.561 2.6 1.561 2.978 0a1.533 1.533 0 012.287-.947c1.372.836 2.942-.734 2.106-2.106a1.533 1.533 0 01.947-2.287c1.561-.379 1.561-2.6 0-2.978a1.532 1.532 0 01-.947-2.287c.836-1.372-.734-2.942-2.106-2.106a1.532 1.532 0 01-2.287-.947zM10 13a3 3 0 100-6 3 3 0 000 6z"
+                            clipRule="evenodd"
+                          />
+                        </svg>
+                        Data Visualization & Reporting
+                      </h3>
+                      <div className="flex flex-wrap gap-2">
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Looker Studio
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Tableau
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Matplotlib 
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Seaborn
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Plotly
+                        </span>
+                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
+                          Excel
                         </span>
                       </div>
                     </div>
@@ -222,29 +277,26 @@ export default function Home() {
                             clipRule="evenodd"
                           />
                         </svg>
-                        Tools & Others
+                        Data Visualization & Reporting
                       </h3>
                       <div className="flex flex-wrap gap-2">
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          Git
+                          Looker Studio
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
                           Tableau
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          Looker Studio
+                          Matplotlib 
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          Lucidchart
+                          Seaborn
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          Agile
+                          Plotly
                         </span>
                         <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          VS Code
-                        </span>
-                        <span className="px-4 py-2 bg-[#FFE8B0]/50 rounded-md text-[#8B6B3D] hover:bg-[#FFE8B0] transition-colors">
-                          Azure Data Studio
+                          Excel
                         </span>
                       </div>
                     </div>
